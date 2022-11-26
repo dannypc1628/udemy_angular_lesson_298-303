@@ -1,9 +1,7 @@
 import { Injectable } from "@angular/core";
 import { HttpClient, HttpErrorResponse } from "@angular/common/http";
-import { catchError, tap } from "rxjs/operators";
-import { throwError, Subject, pipe } from "rxjs";
-
-import { User } from "./user.model";
+import { catchError } from "rxjs/operators";
+import { throwError } from "rxjs";
 
 export interface AuthResponseData {
   kind: string;
@@ -17,8 +15,6 @@ export interface AuthResponseData {
 
 @Injectable({ providedIn: "root" })
 export class AuthService {
-  user = new Subject<User>();
-
   constructor(private http: HttpClient) {}
 
   signup(email: string, password: string) {
@@ -58,8 +54,7 @@ export class AuthService {
         errorMessage = "This email exists already";
         break;
       case "EMAIL_NOT_FOUND":
-        errorMessage = "This email does not exist. ";
-        break;
+
       case "INVALID_PASSWORD":
         errorMessage = "This password is not correct.";
         break;
