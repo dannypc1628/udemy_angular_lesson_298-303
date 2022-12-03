@@ -95,7 +95,7 @@ export class AuthService {
     if(this.tokenExpirationTimer){
       clearTimeout(this.tokenExpirationTimer)
     }
-    this.tokenExpirationTimer = null;ß
+    this.tokenExpirationTimer = null;
   }
 
   autoLogout(expirationDuration:number){
