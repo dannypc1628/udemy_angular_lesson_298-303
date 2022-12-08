@@ -1,3 +1,4 @@
+import { AlertComponent } from "./shared/alert/alert.component";
 import { AuthInterceptorService } from "./auth/auth-interceptor.service";
 import { BrowserModule } from "@angular/platform-browser";
 import { NgModule } from "@angular/core";
@@ -36,6 +37,7 @@ import { LoadingSpinnerComponent } from "./shared/loading-spinner/loading-spinne
     RecipeEditComponent,
     AuthComponent,
     LoadingSpinnerComponent,
+    AlertComponent,
   ],
   imports: [
     BrowserModule,
