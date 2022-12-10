@@ -58,5 +58,6 @@ import { LoadingSpinnerComponent } from "./shared/loading-spinner/loading-spinne
     },
   ],
   bootstrap: [AppComponent],
+  entryComponents: [AlertComponent],
 })
 export class AppModule {}
